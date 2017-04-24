@@ -6,10 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title: string = 'Restaurantes';
-
+  public title: string = 'Restaurantes';
   public programas: Array<string>;
   public elemento: string;
+  public fecha = new Date(1990, 6, 27);
 
   constructor(){
     this.programas = ["Sublime Text"];
