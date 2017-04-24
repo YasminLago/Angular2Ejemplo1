@@ -1,0 +1,26 @@
+<input type="text" [(ngModel)] = "elemento" placeholder = "Añade un programa"/>
+<button (click) = "addElement()">Añadir elemento</button>
+<ul>
+  <li *ngFor="let programa of programas" class="programa-item">
+    {{programa}}
+  </li>
+</ul>
+
+<header id = "header">
+  <a [routerLink]="['Home']">
+    <img src="../../assets/images/imagen.png" id="logo"/>
+  </a>
+  <h1>{{titulo}}</h1>
+  <div class="clearfix"></div>
+</header>
+<nav id="nav">
+  <ul>
+    <li><a [routerLink]="['Home']">Inicio</a></li>
+    <li><a [routerLink]="['CrearRestaurante']">Crear restaurante</a></li>
+    <li><a [routerLink]="['DondeComoHoy',{random: 'true'}]">¿Donde como hoy?</a></li>
+  </ul>
+</nav>
+<section class = "main">
+  <router-outlet></router-outlet>
+  <div class="clearfix"></div>
+</section>
